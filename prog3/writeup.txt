@@ -1,0 +1,13 @@
+1.J.P. Sohal
+
+
+2.So i made the bad decision to start later then i should have on this assignment and so that is why all of my parts fo program are not working i beleive. I was not able to test any of them besied the build tree and the load species file. Both do work but not completely to the best of my knowledge. Load species works but it doesnt work when the dna sequence is more then one line. And build tree works but im not sure if it is working correctly. I was not able to test the other files that i had completed obviouisly due to the lack of completion on tho main parts.
+
+3. I buid takes a little to long checking all distance
+
+
+
+4.I think the hardest part for me was load species file i spend the most time on it. I was always abel to make it work for one or the other, more then one line of seqeuence or only one line. Build tree took me a while to get the algorithm once i got tha tthen i was able to implement it. Im not sure if it works though like i said.
+
+5.I created a simple test file like the on you had in the assignment description.
+6.I think this assignment was probally one of the hardest if not the hardest one i have had to do. But it is also my fault for not startign early enough. Other than that thanks had a good quarter

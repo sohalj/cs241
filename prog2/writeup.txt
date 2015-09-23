@@ -1,0 +1,15 @@
+Megan Dittamore
+JP Sohal
+sohalj
+
+3. Our whole program is working, except for the extra credit section, countAllPaths.  Besides our inability to get countAllPaths to work, everything else is outputting as expected.
+
+4. Our program seems inefficient in its time complexity.  It takes a long time to find the hypothesis when the there are a lot of paths.  
+
+5. We had a lot of trouble writing decode.  We got stuck for a very long time on how to backtrack, and then add the words in the correct order.  We got to a point where we had the words in backwards order, but had to try a variety of different storage methods (arrays, linked lists, and finally arrayLists) before we figured out a good way to store it, then successfully backtrack.  TopologicalSort was hard to write, because the contain function wasn't working for the result array, so we had to make an extra linked list which was essentially the same as the result, but the contain function worked for the linked list.  ComputeWER was also pretty hard to write because there was a lot of details (A missed +1, or > instead of >=) that messed up the program, and were hard to catch.
+
+6. We tested by using a lot of print statements to make sure that our expected results were the actual results.  To check that we were asymptotically efficient, we checked to make sure the sizes of our arrays and matrices would be suitable for all lattice file sizes.
+
+7. Lower lmscores are associated with lower WER scores for the most part.  Some of them are the same.  The sentences that have scores greater than or equal to 20 have more complex sentences.  The score doesn't seem to affect the simple lattices as much as the larger ones.
+
+8. Extra week was extremely helpful, thank you!

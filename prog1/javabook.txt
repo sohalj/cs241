@@ -1,0 +1,546 @@
+<s> when you begin a journey it's a good idea to have a mental map of the terrain you'll be passing through </s>
+<s> the same is true for an intellectual journey such as learning to write computer programs </s>
+<s> in this case you'll need to know the basics of what computers are and how they work </s>
+<s> you'll want to have some idea of what a computer program is and how one is created </s>
+<s> since you will be writing programs in the java programming language you'll want to know something about that language in particular and about the modern networked computing environment for which java is designed </s>
+<s> as you read this chapter don't worry if you can't understand everything in detail </s>
+<s> ( in fact it would be impossible for you to learn all the details from the brief expositions in this chapter </s>
+<s> ) concentrate on learning enough about the big ideas to orient yourself in preparation for the rest of the book </s>
+<s> most of what is covered in this chapter will be covered in much greater detail later in the book </s>
+<s> a computer is a complex system consisting of many different components </s>
+<s> but at the heart -- or the brain if you want -- of the computer is a single component that does the actual computing </s>
+<s> this is the central processing unit or cpu </s>
+<s> in a modern desktop computer the cpu is a single "chip" on the order of one square inch in size </s>
+<s> the job of the cpu is to execute programs </s>
+<s> a program is simply a list of unambiguous instructions meant to be followed mechanically by a computer </s>
+<s> a computer is built to carry out instructions that are written in a very simple type of language called machine language </s>
+<s> each type of computer has its own machine language and the computer can directly execute a program only if the program is expressed in that language </s>
+<s> ( it can execute programs written in other languages if they are first translated into machine language </s>
+<s> ) </s>
+<s> when the cpu executes a program that program is stored in the computer's main memory ( also called the ram or random access memory ) </s>
+<s> in addition to the program memory can also hold data that is being used or processed by the program </s>
+<s> main memory consists of a sequence of locations </s>
+<s> these locations are numbered and the sequence number of a location is called its address </s>
+<s> an address provides a way of picking out one particular piece of information from among the millions stored in memory </s>
+<s> when the cpu needs to access the program instruction or data in a particular location it sends the address of that information as a signal to the memory the memory responds by sending back the data contained in the specified location </s>
+<s> the cpu can also store information in memory by specifying the information to be stored and the address of the location where it is to be stored </s>
+<s> on the level of machine language the operation of the cpu is fairly straightforward ( although it is very complicated in detail ) </s>
+<s> the cpu executes a program that is stored as a sequence of machine language instructions in main memory </s>
+<s> it does this by repeatedly reading or fetching an instruction from memory and then carrying out or executing that instruction </s>
+<s> this process -- fetch an instruction execute it fetch another instruction execute it and so on forever -- is called the fetch-and-execute cycle </s>
+<s> with one exception which will be covered in the next section this is all that the cpu ever does </s>
+<s> the details of the fetch-and-execute cycle are not terribly important but there are a few basic things you should know </s>
+<s> the cpu contains a few internal registers which are small memory units capable of holding a single number or machine language instruction </s>
+<s> the cpu uses one of these registers -- the program counter or pc -- to keep track of where it is in the program it is executing </s>
+<s> the pc stores the address of the next instruction that the cpu should execute </s>
+<s> at the beginning of each fetch-and-execute cycle the cpu checks the pc to see which instruction it should fetch </s>
+<s> during the course of the fetch-and-execute cycle the number in the pc is updated to indicate the instruction that is to be executed in the next cycle </s>
+<s> ( usually but not always this is just the instruction that sequentially follows the current instruction in the program </s>
+<s> ) </s>
+<s> a computer executes machine language programs mechanically -- that is without understanding them or thinking about them -- simply because of the way it is physically put together </s>
+<s> this is not an easy concept </s>
+<s> a computer is a machine built of millions of tiny switches called transistors which have the property that they can be wired together in such a way that an output from one switch can turn another switch on or off </s>
+<s> as a computer computes these switches turn each other on or off in a pattern determined both by the way they are wired together and by the program that the computer is executing </s>
+<s> machine language instructions are expressed as binary numbers </s>
+<s> a binary number is made up of just two possible digits zero and one </s>
+<s> so a machine language instruction is just a sequence of zeros and ones </s>
+<s> each particular sequence encodes some particular instruction </s>
+<s> the data that the computer manipulates is also encoded as binary numbers </s>
+<s> a computer can work directly with binary numbers because switches can readily represent such numbers turn the switch on to represent a one turn it off to represent a zero </s>
+<s> machine language instructions are stored in memory as patterns of switches turned on or off </s>
+<s> when a machine language instruction is loaded into the cpu all that happens is that certain switches are turned on or off in the pattern that encodes that particular instruction </s>
+<s> the cpu is built to respond to this pattern by executing the instruction it encodes it does this simply because of the way all the other switches in the cpu are wired together </s>
+<s> so you should understand this much about how computers work main memory holds machine language programs and data </s>
+<s> these are encoded as binary numbers </s>
+<s> the cpu fetches machine language instructions from memory one after another and executes them </s>
+<s> it does this mechanically without thinking about or understanding what it does -- and therefore the program it executes must be perfect complete in all details and unambiguous because the cpu can do nothing but execute it exactly as written </s>
+<s> here is a schematic view of this first-stage understanding of the computer a computer is a complex system consisting of many different components </s>
+<s> but at the heart -- or the brain if you want -- of the computer is a single component that does the actual computing </s>
+<s> this is the central processing unit or cpu </s>
+<s> in a modern desktop computer the cpu is a single "chip" on the order of one square inch in size </s>
+<s> the job of the cpu is to execute programs </s>
+<s> a program is simply a list of unambiguous instructions meant to be followed mechanically by a computer </s>
+<s> a computer is built to carry out instructions that are written in a very simple type of language called machine language </s>
+<s> each type of computer has its own machine language and the computer can directly execute a program only if the program is expressed in that language </s>
+<s> ( it can execute programs written in other languages if they are first translated into machine language </s>
+<s> ) </s>
+<s> when the cpu executes a program that program is stored in the computer's main memory ( also called the ram or random access memory ) </s>
+<s> in addition to the program memory can also hold data that is being used or processed by the program </s>
+<s> main memory consists of a sequence of locations </s>
+<s> these locations are numbered and the sequence number of a location is called its address </s>
+<s> an address provides a way of picking out one particular piece of information from among the millions stored in memory </s>
+<s> when the cpu needs to access the program instruction or data in a particular location it sends the address of that information as a signal to the memory the memory responds by sending back the data contained in the specified location </s>
+<s> the cpu can also store information in memory by specifying the information to be stored and the address of the location where it is to be stored </s>
+<s> on the level of machine language the operation of the cpu is fairly straightforward ( although it is very complicated in detail ) </s>
+<s> the cpu executes a program that is stored as a sequence of machine language instructions in main memory </s>
+<s> it does this by repeatedly reading or fetching an instruction from memory and then carrying out or executing that instruction </s>
+<s> this process -- fetch an instruction execute it fetch another instruction execute it and so on forever -- is called the fetch-and-execute cycle </s>
+<s> with one exception which will be covered in the next section this is all that the cpu ever does </s>
+<s> the details of the fetch-and-execute cycle are not terribly important but there are a few basic things you should know </s>
+<s> the cpu contains a few internal registers which are small memory units capable of holding a single number or machine language instruction </s>
+<s> the cpu uses one of these registers -- the program counter or pc -- to keep track of where it is in the program it is executing </s>
+<s> the pc stores the address of the next instruction that the cpu should execute </s>
+<s> at the beginning of each fetch-and-execute cycle the cpu checks the pc to see which instruction it should fetch </s>
+<s> during the course of the fetch-and-execute cycle the number in the pc is updated to indicate the instruction that is to be executed in the next cycle </s>
+<s> ( usually but not always this is just the instruction that sequentially follows the current instruction in the program </s>
+<s> ) </s>
+<s> a computer executes machine language programs mechanically -- that is without understanding them or thinking about them -- simply because of the way it is physically put together </s>
+<s> this is not an easy concept </s>
+<s> a computer is a machine built of millions of tiny switches called transistors which have the property that they can be wired together in such a way that an output from one switch can turn another switch on or off </s>
+<s> as a computer computes these switches turn each other on or off in a pattern determined both by the way they are wired together and by the program that the computer is executing </s>
+<s> machine language instructions are expressed as binary numbers </s>
+<s> a binary number is made up of just two possible digits zero and one </s>
+<s> so a machine language instruction is just a sequence of zeros and ones </s>
+<s> each particular sequence encodes some particular instruction </s>
+<s> the data that the computer manipulates is also encoded as binary numbers </s>
+<s> a computer can work directly with binary numbers because switches can readily represent such numbers turn the switch on to represent a one turn it off to represent a zero </s>
+<s> machine language instructions are stored in memory as patterns of switches turned on or off </s>
+<s> when a machine language instruction is loaded into the cpu all that happens is that certain switches are turned on or off in the pattern that encodes that particular instruction </s>
+<s> the cpu is built to respond to this pattern by executing the instruction it encodes it does this simply because of the way all the other switches in the cpu are wired together </s>
+<s> so you should understand this much about how computers work main memory holds machine language programs and data </s>
+<s> these are encoded as binary numbers </s>
+<s> the cpu fetches machine language instructions from memory one after another and executes them </s>
+<s> it does this mechanically without thinking about or understanding what it does -- and therefore the program it executes must be perfect complete in all details and unambiguous because the cpu can do nothing but execute it exactly as written </s>
+<s> here is a schematic view of this first-stage understanding of the computer </s>
+<s> the cpu spends almost all of its time fetching instructions from memory and executing them </s>
+<s> however the cpu and main memory are only two out of many components in a real computer system </s>
+<s> a complete system contains other devices such as </s>
+<s> a hard disk for storing programs and data files </s>
+<s> ( note that main memory holds only a comparatively small amount of information and holds it only as long as the power is turned on </s>
+<s> a hard disk is used for permanent storage of larger amounts of information but programs have to be loaded from disk into main memory before they can actually be executed </s>
+<s> ) </s>
+<s> a keyboard and mouse for user input </s>
+<s> a monitor and printer which can be used to display the computer's output </s>
+<s> an audio output device that allows the computer to play sounds </s>
+<s> a network interface that allows the computer to communicate with other computers that are connected to it on a network either wirelessly or by wire </s>
+<s> a scanner that converts images into coded binary numbers that can be stored and manipulated on the computer </s>
+<s> the list of devices is entirely open ended and computer systems are built so that they can easily be expanded by adding new devices </s>
+<s> somehow the cpu has to communicate with and control all these devices </s>
+<s> the cpu can only do this by executing machine language instructions ( which is all it can do period ) </s>
+<s> the way this works is that for each device in a system there is a device driver which consists of software that the cpu executes when it has to deal with the device </s>
+<s> installing a new device on a system generally has two steps plugging the device physically into the computer and installing the device driver software </s>
+<s> without the device driver the actual physical device would be useless since the cpu would not be able to communicate with it </s>
+<s> a computer system consisting of many devices is typically organized by connecting those devices to one or more busses </s>
+<s> a bus is a set of wires that carry various sorts of information between the devices connected to those wires </s>
+<s> the wires carry data addresses and control signals </s>
+<s> an address directs the data to a particular device and perhaps to a particular register or location within that device </s>
+<s> control signals can be used for example by one device to alert another that data is available for it on the data bus </s>
+<s> a fairly simple computer system might be organized like this </s>
+<s> diagram of a bus with attached devices </s>
+<s> now devices such as keyboard mouse and network interface can produce input that needs to be processed by the cpu </s>
+<s> how does the cpu know that the data is there one simple idea which turns out to be not very satisfactory is for the cpu to keep checking for incoming data over and over </s>
+<s> whenever it finds data it processes it </s>
+<s> this method is called polling since the cpu polls the input devices continually to see whether they have any input data to report </s>
+<s> unfortunately although polling is very simple it is also very inefficient </s>
+<s> the cpu can waste an awful lot of time just waiting for input </s>
+<s> to avoid this inefficiency interrupts are often used instead of polling </s>
+<s> an interrupt is a signal sent by another device to the cpu </s>
+<s> the cpu responds to an interrupt signal by putting aside whatever it is doing in order to respond to the interrupt </s>
+<s> once it has handled the interrupt it returns to what it was doing before the interrupt occurred </s>
+<s> for example when you press a key on your computer keyboard a keyboard interrupt is sent to the cpu </s>
+<s> the cpu responds to this signal by interrupting what it is doing reading the key that you pressed processing it and then returning to the task it was performing before you pressed the key </s>
+<s> again you should understand that this is a purely mechanical process a device signals an interrupt simply by turning on a wire </s>
+<s> the cpu is built so that when that wire is turned on the cpu saves enough information about what it is currently doing so that it can return to the same state later </s>
+<s> this information consists of the contents of important internal registers such as the program counter </s>
+<s> then the cpu jumps to some predetermined memory location and begins executing the instructions stored there </s>
+<s> those instructions make up an interrupt handler that does the processing necessary to respond to the interrupt </s>
+<s> ( this interrupt handler is part of the device driver software for the device that signalled the interrupt </s>
+<s> ) at the end of the interrupt handler is an instruction that tells the cpu to jump back to what it was doing it does that by restoring its previously saved state </s>
+<s> interrupts allow the cpu to deal with asynchronous events </s>
+<s> in the regular fetch-and-execute cycle things happen in a predetermined order everything that happens is "synchronized" with everything else </s>
+<s> interrupts make it possible for the cpu to deal efficiently with events that happen "asynchronously" that is at unpredictable times </s>
+<s> as another example of how interrupts are used consider what happens when the cpu needs to access data that is stored on the hard disk </s>
+<s> the cpu can access data directly only if it is in main memory </s>
+<s> data on the disk has to be copied into memory before it can be accessed </s>
+<s> unfortunately on the scale of speed at which the cpu operates the disk drive is extremely slow </s>
+<s> when the cpu needs data from the disk it sends a signal to the disk drive telling it to locate the data and get it ready </s>
+<s> ( this signal is sent synchronously under the control of a regular program </s>
+<s> ) then instead of just waiting the long and unpredictable amount of time that the disk drive will take to do this the cpu goes on with some other task </s>
+<s> when the disk drive has the data ready it sends an interrupt signal to the cpu </s>
+<s> the interrupt handler can then read the requested data </s>
+<s> now you might have noticed that all this only makes sense if the cpu actually has several tasks to perform </s>
+<s> if it has nothing better to do it might as well spend its time polling for input or waiting for disk drive operations to complete </s>
+<s> all modern computers use multitasking to perform several tasks at once </s>
+<s> some computers can be used by several people at once </s>
+<s> since the cpu is so fast it can quickly switch its attention from one user to another devoting a fraction of a second to each user in turn </s>
+<s> this application of multitasking is called timesharing </s>
+<s> but a modern personal computer with just a single user also uses multitasking </s>
+<s> for example the user might be typing a paper while a clock is continuously displaying the time and a file is being downloaded over the network </s>
+<s> each of the individual tasks that the cpu is working on is called a thread </s>
+<s> ( or a process there are technical differences between threads and processes but they are not important here since it is threads that are used in java </s>
+<s> ) many cpus can literally execute more than one thread simultaneously -- such cpus contain multiple "cores" each of which can run a thread -- but there is always a limit on the number of threads that can be executed at the same time </s>
+<s> since there are often more threads than can be executed simultaneously the computer has to be able switch its attention from one thread to another just as a timesharing computer switches its attention from one user to another </s>
+<s> in general a thread that is being executed will continue to run until one of several things happens </s>
+<s> the thread might voluntarily yield control to give other threads a chance to run </s>
+<s> the thread might have to wait for some asynchronous event to occur </s>
+<s> for example the thread might request some data from the disk drive or it might wait for the user to press a key </s>
+<s> while it is waiting the thread is said to be blocked and other threads if any have a chance to run </s>
+<s> when the event occurs an interrupt will "wake up" the thread so that it can continue running </s>
+<s> the thread might use up its allotted slice of time and be suspended to allow other threads to run </s>
+<s> not all computers can "forcibly" suspend a thread in this way those that can are said to use preemptive multitasking </s>
+<s> to do preemptive multitasking a computer needs a special timer device that generates an interrupt at regular intervals such as 100 times per second </s>
+<s> when a timer interrupt occurs the cpu has a chance to switch from one thread to another whether the thread that is currently running likes it or not </s>
+<s> all modern desktop and laptop computers use preemptive multitasking </s>
+<s> ordinary users and indeed ordinary programmers have no need to deal with interrupts and interrupt handlers </s>
+<s> they can concentrate on the different tasks or threads that they want the computer to perform the details of how the computer manages to get all those tasks done are not important to them </s>
+<s> in fact most users and many programmers can ignore threads and multitasking altogether </s>
+<s> however threads have become increasingly important as computers have become more powerful and as they have begun to make more use of multitasking and multiprocessing </s>
+<s> in fact the ability to work with threads is fast becoming an essential job skill for programmers </s>
+<s> fortunately java has good support for threads which are built into the java programming language as a fundamental programming concept </s>
+<s> programming with threads will be covered in chapter 12 </s>
+<s> just as important in java and in modern programming in general is the basic concept of asynchronous events </s>
+<s> while programmers don't actually deal with interrupts directly they do often find themselves writing event handlers which like interrupt handlers are called asynchronously when specific events occur </s>
+<s> such "event-driven programming" has a very different feel from the more traditional straight-through synchronous programming </s>
+<s> we will begin with the more traditional type of programming which is still used for programming individual tasks but we will return to threads and events later in the text starting in chapter 6 </s>
+<s> by the way the software that does all the interrupt handling handles communication with the user and with hardware devices and controls which thread is allowed to run is called the operating system </s>
+<s> the operating system is the basic essential software without which a computer would not be able to function </s>
+<s> other programs such as word processors and world wide web browsers are dependent upon the operating system </s>
+<s> common operating systems include linux windows xp windows vista and mac os </s>
+<s> when computers were first introduced ordinary people -- including most programmers -- couldn't get near them </s>
+<s> they were locked up in rooms with white-coated attendants who would take your programs and data feed them to the computer and return the computer's response some time later </s>
+<s> when timesharing -- where the computer switches its attention rapidly from one person to another -- was invented in the 1960s it became possible for several people to interact directly with the computer at the same time </s>
+<s> on a timesharing system users sit at "terminals" where they type commands to the computer and the computer types back its response </s>
+<s> early personal computers also used typed commands and responses except that there was only one person involved at a time </s>
+<s> this type of interaction between a user and a computer is called a command-line interface </s>
+<s> today of course most people interact with computers in a completely different way </s>
+<s> they use a graphical user interface or gui </s>
+<s> the computer draws interface components on the screen </s>
+<s> the components include things like windows scroll bars menus buttons and icons </s>
+<s> usually a mouse is used to manipulate such components </s>
+<s> assuming that you have not just been teleported in from the 1970s you are no doubt already familiar with the basics of graphical user interfaces! </s>
+<s> a lot of gui interface components have become fairly standard </s>
+<s> that is they have similar appearance and behavior on many different computer platforms including mac os windows and linux </s>
+<s> java programs which are supposed to run on many different platforms without modification to the program can use all the standard gui components </s>
+<s> they might vary a little in appearance from platform to platform but their functionality should be identical on any computer on which the program runs </s>
+<s> below is a very simple java program -- actually an "applet" since it is running right here in the middle of a web page -- that shows a few standard gui interface components </s>
+<s> there are four components that the user can interact with a button a checkbox a text field and a pop-up menu </s>
+<s> these components are labeled </s>
+<s> there are a few other components in the applet </s>
+<s> the labels themselves are components ( even though you can't interact with them ) </s>
+<s> the right half of the applet is a text area component which can display multiple lines of text </s>
+<s> and a scrollbar component appears alongside the text area when the number of lines of text becomes larger than will fit in the text area </s>
+<s> and in fact in java terminology the whole applet is itself considered to be a "component </s>
+<s> " try clicking on the button and on the checkbox and try selecting an item from the pop-up menu </s>
+<s> you will see a message in the text area about each action that you perform </s>
+<s> you can type in the text field but you might have to click on it first to activate it </s>
+<s> when you press return while typing in the text field you will see a message in the text area </s>
+<s> now java actually has two complete sets of gui components </s>
+<s> one of these the awt or abstract windowing toolkit was available in the original version of java </s>
+<s> the other which is known as swing is included in java version 1 </s>
+<s> 2 or later and is used in preference to the awt in most modern java programs </s>
+<s> the applet that is shown above uses components that are part of swing </s>
+<s> if java is not installed in your web browser or if your browser uses a very old version of java you might get an error when the browser tries to load the applet </s>
+<s> remember that most of the applets in this textbook require java 5 </s>
+<s> 0 ( or higher ) </s>
+<s> when a user interacts with the gui components in this applet an "event" is generated </s>
+<s> for example clicking a push button generates an event and pressing return while typing in a text field generates an event </s>
+<s> each time an event is generated a message is sent to the applet telling it that the event has occurred and the applet responds according to its program </s>
+<s> in fact the program consists mainly of "event handlers" that tell the applet how to respond to various types of events </s>
+<s> in this example the applet has been programmed to respond to each event by displaying a message in the text area </s>
+<s> in a more realistic example the event handlers would have more to do </s>
+<s> the use of the term "message" here is deliberate </s>
+<s> messages as you saw in the previous section are sent to objects </s>
+<s> in fact java gui components are implemented as objects </s>
+<s> java includes many predefined classes that represent various types of gui components </s>
+<s> some of these classes are subclasses of others </s>
+<s> here is a diagram showing some of swing's gui classes and their relationships </s>
+<s> don't worry about the details for now but try to get some feel about how object-oriented programming and inheritance are used here </s>
+<s> note that all the gui classes are subclasses directly or indirectly of a class called jcomponent which represents general properties that are shared by all swing components </s>
+<s> two of the direct subclasses of jcomponent themselves have subclasses </s>
+<s> the classes jtextarea and jtextfield which have certain behaviors in common are grouped together as subclasses of jtextcomponent </s>
+<s> similarly jbutton and jtogglebutton are subclasses of jabstractbutton which represents properties common to both buttons and checkboxes </s>
+<s> ( jcombobox by the way is the swing class that represents pop-up menus </s>
+<s> ) </s>
+<s> just from this brief discussion perhaps you can see how gui programming can make effective use of object-oriented design </s>
+<s> in fact gui's with their "visible objects" are probably a major factor contributing to the popularity of oop </s>
+<s> programming with gui components and events is one of the most interesting aspects of java </s>
+<s> however we will spend several chapters on the basics before returning to this topic in chapter 6 </s>
+<s> programs must be designed </s>
+<s> no one can just sit down at the computer and compose a program of any complexity </s>
+<s> the discipline called software engineering is concerned with the construction of correct working well-written programs </s>
+<s> the software engineer tries to use accepted and proven methods for analyzing the problem to be solved and for designing a program to solve that problem </s>
+<s> during the 1970s and into the 80s the primary software engineering methodology was structured programming </s>
+<s> the structured programming approach to program design was based on the following advice to solve a large problem break the problem into several pieces and work on each piece separately to solve each piece treat it as a new problem which can itself be broken down into smaller problems eventually you will work your way down to problems that can be solved directly without further decomposition </s>
+<s> this approach is called top-down programming </s>
+<s> there is nothing wrong with top-down programming </s>
+<s> it is a valuable and often-used approach to problem-solving </s>
+<s> however it is incomplete </s>
+<s> for one thing it deals almost entirely with producing the instructions necessary to solve a problem </s>
+<s> but as time went on people realized that the design of the data structures for a program was at least as important as the design of subroutines and control structures </s>
+<s> top-down programming doesn't give adequate consideration to the data that the program manipulates </s>
+<s> another problem with strict top-down programming is that it makes it difficult to reuse work done for other projects </s>
+<s> by starting with a particular problem and subdividing it into convenient pieces top-down programming tends to produce a design that is unique to that problem </s>
+<s> it is unlikely that you will be able to take a large chunk of programming from another program and fit it into your project at least not without extensive modification </s>
+<s> producing high-quality programs is difficult and expensive so programmers and the people who employ them are always eager to reuse past work </s>
+<s> so in practice top-down design is often combined with bottom-up design </s>
+<s> in bottom-up design the approach is to start "at the bottom" with problems that you already know how to solve ( and for which you might already have a reusable software component at hand ) </s>
+<s> from there you can work upwards towards a solution to the overall problem </s>
+<s> the reusable components should be as "modular" as possible </s>
+<s> a module is a component of a larger system that interacts with the rest of the system in a simple well-defined straightforward manner </s>
+<s> the idea is that a module can be "plugged into" a system </s>
+<s> the details of what goes on inside the module are not important to the system as a whole as long as the module fulfills its assigned role correctly </s>
+<s> this is called information hiding and it is one of the most important principles of software engineering </s>
+<s> one common format for software modules is to contain some data along with some subroutines for manipulating that data </s>
+<s> for example a mailing-list module might contain a list of names and addresses along with a subroutine for adding a new name a subroutine for printing mailing labels and so forth </s>
+<s> in such modules the data itself is often hidden inside the module a program that uses the module can then manipulate the data only indirectly by calling the subroutines provided by the module </s>
+<s> this protects the data since it can only be manipulated in known well-defined ways </s>
+<s> and it makes it easier for programs to use the module since they don't have to worry about the details of how the data is represented </s>
+<s> information about the representation of the data is hidden </s>
+<s> modules that could support this kind of information-hiding became common in programming languages in the early 1980s </s>
+<s> since then a more advanced form of the same idea has more or less taken over software engineering </s>
+<s> this latest approach is called object-oriented programming often abbreviated as oop </s>
+<s> the central concept of object-oriented programming is the object which is a kind of module containing data and subroutines </s>
+<s> the point-of-view in oop is that an object is a kind of self-sufficient entity that has an internal state ( the data it contains ) and that can respond to messages ( calls to its subroutines ) </s>
+<s> a mailing list object for example has a state consisting of a list of names and addresses </s>
+<s> if you send it a message telling it to add a name it will respond by modifying its state to reflect the change </s>
+<s> if you send it a message telling it to print itself it will respond by printing out its list of names and addresses </s>
+<s> the oop approach to software engineering is to start by identifying the objects involved in a problem and the messages that those objects should respond to </s>
+<s> the program that results is a collection of objects each with its own data and its own set of responsibilities </s>
+<s> the objects interact by sending messages to each other </s>
+<s> there is not much "top-down" in the large-scale design of such a program and people used to more traditional programs can have a hard time getting used to oop </s>
+<s> however people who use oop would claim that object-oriented programs tend to be better models of the way the world itself works and that they are therefore easier to write easier to understand and more likely to be correct </s>
+<s> you should think of objects as "knowing" how to respond to certain messages </s>
+<s> different objects might respond to the same message in different ways </s>
+<s> for example a "print" message would produce very different results depending on the object it is sent to </s>
+<s> this property of objects -- that different objects can respond to the same message in different ways -- is called polymorphism </s>
+<s> it is common for objects to bear a kind of "family resemblance" to one another </s>
+<s> objects that contain the same type of data and that respond to the same messages in the same way belong to the same class </s>
+<s> ( in actual programming the class is primary that is a class is created and then one or more objects are created using that class as a template </s>
+<s> ) but objects can be similar without being in exactly the same class </s>
+<s> for example consider a drawing program that lets the user draw lines rectangles ovals polygons and curves on the screen </s>
+<s> in the program each visible object on the screen could be represented by a software object in the program </s>
+<s> there would be five classes of objects in the program one for each type of visible object that can be drawn </s>
+<s> all the lines would belong to one class all the rectangles to another class and so on </s>
+<s> these classes are obviously related all of them represent "drawable objects </s>
+<s> " they would for example all presumably be able to respond to a "draw yourself" message </s>
+<s> another level of grouping based on the data needed to represent each type of object is less obvious but would be very useful in a program we can group polygons and curves together as "multipoint objects" while lines rectangles and ovals are "two-point objects </s>
+<s> " ( a line is determined by its endpoints a rectangle by two of its corners and an oval by two corners of the rectangle that contains it </s>
+<s> ) we could diagram these relationships as follows </s>
+<s> a sample class hierarchy </s>
+<s> drawableobject multipointobject and twopointobject would be classes in the program </s>
+<s> multipointobject and twopointobject would be subclasses of drawableobject </s>
+<s> the class line would be a subclass of twopointobject and ( indirectly ) of drawableobject </s>
+<s> a subclass of a class is said to inherit the properties of that class </s>
+<s> the subclass can add to its inheritance and it can even "override" part of that inheritance ( by defining a different response to some method ) </s>
+<s> nevertheless lines rectangles and so on are drawable objects and the class drawableobject expresses this relationship </s>
+<s> inheritance is a powerful means for organizing a program </s>
+<s> it is also related to the problem of reusing software components </s>
+<s> a class is the ultimate reusable component </s>
+<s> not only can it be reused directly if it fits exactly into a program you are trying to write but if it just almost fits you can still reuse it by defining a subclass and making only the small changes necessary to adapt it exactly to your needs </s>
+<s> so oop is meant to be both a superior program-development tool and a partial solution to the software reuse problem </s>
+<s> objects classes and object-oriented programming will be important themes throughout the rest of this text </s>
+<s> you will start using objects that are built into the java language in the next chapter and in chapter 5 you will begin creating your own classes and objects </s>
+<s> there are two basic aspects of programming data and instructions </s>
+<s> to work with data you need to understand variables and types to work with instructions you need to understand control structures and subroutines </s>
+<s> you'll spend a large part of the course becoming familiar with these concepts </s>
+<s> a variable is just a memory location ( or several locations treated as a unit ) that has been given a name so that it can be easily referred to and used in a program </s>
+<s> the programmer only has to worry about the name it is the compiler's responsibility to keep track of the memory location </s>
+<s> the programmer does need to keep in mind that the name refers to a kind of "box" in memory that can hold data even if the programmer doesn't have to know where in memory that box is located </s>
+<s> in java and in many other programming languages a variable has a type that indicates what sort of data it can hold </s>
+<s> one type of variable might hold integers -- whole numbers such as 3 -7 and 0 -- while another holds floating point numbers -- numbers with decimal points such as 3 </s>
+<s> 14 -2 </s>
+<s> 7 or 17 </s>
+<s> ( yes the computer does make a distinction between the integer 17 and the floating-point number 17 </s>
+<s> 0 they actually look quite different inside the computer </s>
+<s> ) there could also be types for individual characters ( 'a' '' etc </s>
+<s> ) strings ( "hello" "a string can include many characters" etc </s>
+<s> ) and less common types such as dates colors sounds or any other kind of data that a program might need to store </s>
+<s> programming languages always have commands for getting data into and out of variables and for doing computations with data </s>
+<s> for example the following "assignment statement" which might appear in a java program tells the computer to take the number stored in the variable named "principal" multiply that number by 0 </s>
+<s> 07 and then store the result in the variable named "interest" </s>
+<s> interest = principal * 0 </s>
+<s> there are also "input commands" for getting data from the user or from files on the computer's disks and "output commands" for sending data in the other direction </s>
+<s> these basic commands -- for moving data from place to place and for performing computations -- are the building blocks for all programs </s>
+<s> these building blocks are combined into complex programs using control structures and subroutines </s>
+<s> a program is a sequence of instructions </s>
+<s> in the ordinary "flow of control" the computer executes the instructions in the sequence in which they appear one after the other </s>
+<s> however this is obviously very limited the computer would soon run out of instructions to execute </s>
+<s> control structures are special instructions that can change the flow of control </s>
+<s> there are two basic types of control structure loops which allow a sequence of instructions to be repeated over and over and branches which allow the computer to decide between two or more different courses of action by testing conditions that occur as the program is running </s>
+<s> for example it might be that if the value of the variable "principal" is greater than 10000 then the "interest" should be computed by multiplying the principal by 0 </s>
+<s> 05 if not then the interest should be computed by multiplying the principal by 0 </s>
+<s> a program needs some way of expressing this type of decision </s>
+<s> in java it could be expressed using the following "if statement" </s>
+<s> if ( principal > 10000 ) </s>
+<s> interest = principal * 0 </s>
+<s> else </s>
+<s> interest = principal * 0 </s>
+<s> ( don't worry about the details for now </s>
+<s> just remember that the computer can test a condition and decide what to do next on the basis of that test </s>
+<s> ) </s>
+<s> loops are used when the same task has to be performed more than once </s>
+<s> for example if you want to print out a mailing label for each name on a mailing list you might say "get the first name and address and print the label get the second name and address and print the label get the third name and address and print the label </s>
+<s> " but this quickly becomes ridiculous -- and might not work at all if you don't know in advance how many names there are </s>
+<s> what you would like to say is something like "while there are more names to process get the next name and address and print the label </s>
+<s> " a loop can be used in a program to express such repetition </s>
+<s> large programs are so complex that it would be almost impossible to write them if there were not some way to break them up into manageable "chunks </s>
+<s> " subroutines provide one way to do this </s>
+<s> a subroutine consists of the instructions for performing some task grouped together as a unit and given a name </s>
+<s> that name can then be used as a substitute for the whole set of instructions </s>
+<s> for example suppose that one of the tasks that your program needs to perform is to draw a house on the screen </s>
+<s> you can take the necessary instructions make them into a subroutine and give that subroutine some appropriate name -- say "drawhouse(  )" </s>
+<s> then anyplace in your program where you need to draw a house you can do so with the single command </s>
+<s> drawhouse(  ) </s>
+<s> this will have the same effect as repeating all the house-drawing instructions in each place </s>
+<s> the advantage here is not just that you save typing </s>
+<s> organizing your program into subroutines also helps you organize your thinking and your program design effort </s>
+<s> while writing the house-drawing subroutine you can concentrate on the problem of drawing a house without worrying for the moment about the rest of the program </s>
+<s> and once the subroutine is written you can forget about the details of drawing houses -- that problem is solved since you have a subroutine to do it for you </s>
+<s> a subroutine becomes just like a built-in part of the language which you can use without thinking about the details of what goes on "inside" the subroutine </s>
+<s> variables types loops branches and subroutines are the basis of what might be called "traditional programming </s>
+<s> " however as programs become larger additional structure is needed to help deal with their complexity </s>
+<s> one of the most effective tools that has been found is object-oriented programming which is discussed in the next section </s>
+<s> machine language consists of very simple instructions that can be executed directly by the cpu of a computer </s>
+<s> almost all programs though are written in high-level programming languages such as java pascal or c++ </s>
+<s> a program written in a high-level language cannot be run directly on any computer </s>
+<s> first it has to be translated into machine language </s>
+<s> this translation can be done by a program called a compiler </s>
+<s> a compiler takes a high-level-language program and translates it into an executable machine-language program </s>
+<s> once the translation is done the machine-language program can be run any number of times but of course it can only be run on one type of computer ( since each type of computer has its own individual machine language ) </s>
+<s> if the program is to run on another type of computer it has to be re-translated using a different compiler into the appropriate machine language </s>
+<s> there is an alternative to compiling a high-level language program </s>
+<s> instead of using a compiler which translates the program all at once you can use an interpreter which translates it instruction-by-instruction as necessary </s>
+<s> an interpreter is a program that acts much like a cpu with a kind of fetch-and-execute cycle </s>
+<s> in order to execute a program the interpreter runs in a loop in which it repeatedly reads one instruction from the program decides what is necessary to carry out that instruction and then performs the appropriate machine-language commands to do so </s>
+<s> one use of interpreters is to execute high-level language programs </s>
+<s> for example the programming language lisp is usually executed by an interpreter rather than a compiler </s>
+<s> however interpreters have another purpose they can let you use a machine-language program meant for one type of computer on a completely different type of computer </s>
+<s> for example there is a program called "virtual pc" that runs on mac os computers </s>
+<s> virtual pc is an interpreter that executes machine-language programs written for ibm-pc-clone computers </s>
+<s> if you run virtual pc on your mac os you can run any pc program including programs written for windows </s>
+<s> ( unfortunately a pc program will run much more slowly than it would on an actual ibm clone </s>
+<s> the problem is that virtual pc executes several mac os machine-language instructions for each pc machine-language instruction in the program it is interpreting </s>
+<s> compiled programs are inherently faster than interpreted programs </s>
+<s> ) </s>
+<s> the designers of java chose to use a combination of compilation and interpretation </s>
+<s> programs written in java are compiled into machine language but it is a machine language for a computer that doesn't really exist </s>
+<s> this so-called "virtual" computer is known as the java virtual machine or jvm </s>
+<s> the machine language for the java virtual machine is called java bytecode </s>
+<s> there is no reason why java bytecode couldn't be used as the machine language of a real computer rather than a virtual computer </s>
+<s> but in fact the use of a virtual machine makes possible one of the main selling points of java the fact that it can actually be used on any computer </s>
+<s> all that the computer needs is an interpreter for java bytecode </s>
+<s> such an interpreter simulates the jvm in the same way that virtual pc simulates a pc computer </s>
+<s> ( the term jvm is also used for the java bytecode interpreter program that does the simulation so we say that a computer needs a jvm in order to run java programs </s>
+<s> technically it would be more correct to say that the interpreter implements the jvm than to say that it is a jvm </s>
+<s> ) </s>
+<s> of course a different java bytecode interpreter is needed for each type of computer but once a computer has a java bytecode interpreter it can run any java bytecode program </s>
+<s> and the same java bytecode program can be run on any computer that has such an interpreter </s>
+<s> this is one of the essential features of java the same compiled program can be run on many different types of computers </s>
+<s> why you might wonder use the intermediate java bytecode at all why not just distribute the original java program and let each person compile it into the machine language of whatever computer they want to run it on there are many reasons </s>
+<s> first of all a compiler has to understand java a complex high-level language </s>
+<s> the compiler is itself a complex program </s>
+<s> a java bytecode interpreter on the other hand is a fairly small simple program </s>
+<s> this makes it easy to write a bytecode interpreter for a new type of computer once that is done that computer can run any compiled java program </s>
+<s> it would be much harder to write a java compiler for the same computer </s>
+<s> furthermore many java programs are meant to be downloaded over a network </s>
+<s> this leads to obvious security concerns you don't want to download and run a program that will damage your computer or your files </s>
+<s> the bytecode interpreter acts as a buffer between you and the program you download </s>
+<s> you are really running the interpreter which runs the downloaded program indirectly </s>
+<s> the interpreter can protect you from potentially dangerous actions on the part of that program </s>
+<s> when java was still a new language it was criticized for being slow since java bytecode was executed by an interpreter it seemed that java bytecode programs could never run as quickly as programs compiled into native machine language ( that is the actual machine language of the computer on which the program is running ) </s>
+<s> however this problem has been largely overcome by the use of just-in-time compilers for executing java bytecode </s>
+<s> a just-in-time compiler translates java bytecode into native machine language </s>
+<s> it does this while it is executing the program </s>
+<s> just as for a normal interpreter the input to a just-in-time compiler is a java bytecode program and its task is to execute that program </s>
+<s> but as it is executing the program it also translates parts of it into machine language </s>
+<s> the translated parts of the program can then be executed much more quickly than they could be interpreted </s>
+<s> since a given part of a program is often executed many times as the program runs a just-in-time compiler can significantly speed up the overall execution time </s>
+<s> i should note that there is no necessary connection between java and java bytecode </s>
+<s> a program written in java could certainly be compiled into the machine language of a real computer </s>
+<s> and programs written in other languages could be compiled into java bytecode </s>
+<s> however it is the combination of java and java bytecode that is platform-independent secure and network-compatible while allowing you to program in a modern high-level object-oriented language </s>
+<s> ( in the past few years it has become fairly common to create new programming languages or versions of old languages that compile into java bytecode </s>
+<s> the compiled bytecode programs can then be executed by a standard jvm </s>
+<s> new languages that have been developed specifically for programming the jvm include groovy clojure and processing </s>
+<s> jython and jruby are versions of older languages python and ruby that target the jvm </s>
+<s> these languages make it possible to enjoy many of the advantages of the jvm while avoiding some of the technicalities of the java language </s>
+<s> in fact the use of other languages with the jvm has become important enough that several new features have been added to the jvm in java version 7 specifically to add better support for some of those languages </s>
+<s> ) </s>
+<s> i should also note that the really hard part of platform-independence is providing a "graphical user interface" -- with windows buttons etc </s>
+<s> -- that will work on all the platforms that support java </s>
+<s> you'll see more about this problem in section 1 </s>
+<s> computers can be connected together on networks </s>
+<s> a computer on a network can communicate with other computers on the same network by exchanging data and files or by sending and receiving messages </s>
+<s> computers on a network can even work together on a large computation </s>
+<s> today millions of computers throughout the world are connected to a single huge network called the internet </s>
+<s> new computers are being connected to the internet every day both by wireless communication and by physical connection using technologies such as dsl cable modems or ethernet </s>
+<s> there are elaborate protocols for communication over the internet </s>
+<s> a protocol is simply a detailed specification of how communication is to proceed </s>
+<s> for two computers to communicate at all they must both be using the same protocols </s>
+<s> the most basic protocols on the internet are the internet protocol ( ip ) which specifies how data is to be physically transmitted from one computer to another and the transmission control protocol ( tcp ) which ensures that data sent using ip is received in its entirety and without error </s>
+<s> these two protocols which are referred to collectively as tcp/ip provide a foundation for communication </s>
+<s> other protocols use tcp/ip to send specific types of information such as web pages electronic mail and data files </s>
+<s> all communication over the internet is in the form of packets </s>
+<s> a packet consists of some data being sent from one computer to another along with addressing information that indicates where on the internet that data is supposed to go </s>
+<s> think of a packet as an envelope with an address on the outside and a message on the inside </s>
+<s> ( the message is the data </s>
+<s> ) the packet also includes a "return address" that is the address of the sender </s>
+<s> a packet can hold only a limited amount of data longer messages must be divided among several packets which are then sent individually over the net and reassembled at their destination </s>
+<s> every computer on the internet has an ip address a number that identifies it uniquely among all the computers on the net </s>
+<s> the ip address is used for addressing packets </s>
+<s> a computer can only send data to another computer on the internet if it knows that computer's ip address </s>
+<s> since people prefer to use names rather than numbers most computers are also identified by names called domain names </s>
+<s> for example the main computer of the mathematics department at hobart and william smith colleges has the domain name math </s>
+<s> hws </s>
+<s> edu </s>
+<s> ( domain names are just for convenience your computer still needs to know ip addresses before it can communicate </s>
+<s> there are computers on the internet whose job it is to translate domain names to ip addresses </s>
+<s> when you use a domain name your computer sends a message to a domain name server to find out the corresponding ip address </s>
+<s> then your computer uses the ip address rather than the domain name to communicate with the other computer </s>
+<s> ) </s>
+<s> the internet provides a number of services to the computers connected to it ( and of course to the users of those computers ) </s>
+<s> these services use tcp/ip to send various types of data over the net </s>
+<s> among the most popular services are instant messaging file sharing electronic mail and the world-wide web </s>
+<s> each service has its own protocols which are used to control transmission of data over the network </s>
+<s> each service also has some sort of user interface which allows the user to view send and receive data through the service </s>
+<s> for example the email service uses a protocol known as smtp ( simple mail transfer protocol ) to transfer email messages from one computer to another </s>
+<s> other protocols such as pop and imap are used to fetch messages from an email account so that the recipient can read them </s>
+<s> a person who uses email however doesn't need to understand or even know about these protocols </s>
+<s> instead they are used behind the scenes by computer programs to send and receive email messages </s>
+<s> these programs provide the user with an easy-to-use user interface to the underlying network protocols </s>
+<s> the world-wide web is perhaps the most exciting of network services </s>
+<s> the world-wide web allows you to request pages of information that are stored on computers all over the internet </s>
+<s> a web page can contain links to other pages on the same computer from which it was obtained or to other computers anywhere in the world </s>
+<s> a computer that stores such pages of information is called a web server </s>
+<s> the user interface to the web is the type of program known as a web browser </s>
+<s> common web browsers include internet explorer and firefox </s>
+<s> you use a web browser to request a page of information </s>
+<s> the browser sends a request for that page to the computer on which the page is stored and when a response is received from that computer the web browser displays it to you in a neatly formatted form </s>
+<s> a web browser is just a user interface to the web </s>
+<s> behind the scenes the web browser uses a protocol called http ( hypertext transfer protocol ) to send each page request and to receive the response from the web server </s>
+<s> now just what you might be thinking does all this have to do with java in fact java is intimately associated with the internet and the world-wide web </s>
+<s> as you have seen in the previous section special java programs called applets are meant to be transmitted over the internet and displayed on web pages </s>
+<s> a web server transmits a java applet just as it would transmit any other type of information </s>
+<s> a web browser that understands java -- that is that includes an interpreter for the java virtual machine -- can then run the applet right on the web page </s>
+<s> since applets are programs they can do almost anything including complex interaction with the user </s>
+<s> with java a web page becomes more than just a passive display of information </s>
+<s> it becomes anything that programmers can imagine and implement </s>
+<s> but applets are only one aspect of java's relationship with the internet and not the major one </s>
+<s> in fact as both java and the internet have matured applets have become much less important </s>
+<s> at the same time however java has increasingly been used to write complex stand-alone applications that do not depend on a web browser </s>
+<s> many of these programs are network-related </s>
+<s> for example many of the largest and most complex web sites use web server software that is written in java </s>
+<s> java includes excellent support for network protocols and its platform independence makes it possible to write network programs that work on many different types of computer </s>
+<s> you will learn about java's network support in chapter 11 </s>
+<s> its association with the internet is not java's only advantage </s>
+<s> but many good programming languages have been invented only to be soon forgotten </s>
+<s> java has had the good luck to ride on the coattails of the internet's immense and increasing popularity </s>
+<s> as java has matured its applications have reached far beyond the net </s>
+<s> the standard version of java already comes with support for many technologies such as cryptography and data compression </s>
+<s> free extensions are available to support many other technologies such as advanced sound processing and three-dimensional graphics </s>
+<s> complex high-performance systems can be developed in java </s>
+<s> for example hadoop a system for large scale data processing is written in java </s>
+<s> hadoop is used by yahoo facebook and other web sites to process the huge amounts of data generated by their users </s>
+<s> furthermore java is not restricted to use on traditional computers </s>
+<s> java can be used to write programs for many smartphones ( though not for the iphone ) </s>
+<s> it is the primary development language for blackberries and android-based phones such as the verizon droid </s>
+<s> mobile devices such as smartphones use a version of java called java me ( "mobile edition" ) </s>
+<s> it's the same basic language as the standard edition but the set of classes that is included as a standard part of the language is different </s>
+<s> java me is also the programming language for the amazon kindle ebook reader and for interactive features on blu-ray video disks </s>
+<s> at this time java certainly ranks as one of the most widely used programming languages </s>
+<s> it is a good choice for almost any programming project that is meant to run on more than one type of computing device and is a reasonable choice even for many programs that will run on only one device </s>
+<s> it is probably the most widely taught language at colleges and universities </s>
+<s> it is similar enough to other popular languages such as c c++ and c# that knowing it will give you a good start on learning those languages as well </s>
+<s> overall learning java is a great starting point on the road to becoming an expert programmer </s>
+<s> i hope you enjoy the journey! </s>
+
