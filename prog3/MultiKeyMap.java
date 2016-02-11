@@ -28,7 +28,7 @@
  * in to your repository.
  * 
  * Brian Hutchinson
- * Nov 2013
+ * 
  *
  * If modified, student name goes here and modification date go here
  *
